@@ -1,0 +1,278 @@
+:root {
+    --heading: rgba(0 10 45);
+    --header: rgb(173, 173, 189);
+    --para: #777;
+    --para-tint: #e4e4e4;
+    --white: #fff;
+    --whitelink: rgba(255, 255, 255, 0.8);
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --bg: rgba(173, 173, 189, 0.9);
+    --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+    --shadow: 0px 0px 20px 0px rgb(132 144 255/ 20%);
+    --black: #171819;
+    ;
+    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+    --footer-font-color: rgb(144, 144, 144);
+}
+/* 
+==========================================
+       reusable section start
+==========================================
+ */
+ .common-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.3rem;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.common-heading::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 90%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--helper);
+    border-radius: 50%;
+
+}
+
+.common-heading::after {
+    content: "";
+    position: absolute;
+    top: 114%;
+    left: 0rem;
+    min-width: 20rem;
+    height: 0.3rem;
+    background: var(--helper);
+
+}
+/* 
+==========================================
+       hero section start
+==========================================
+ */
+
+.hero-section {
+    height: 70%;
+}
+
+.btn-hire {
+
+    font-size: 1.9rem;
+    /* margin-top: 5rem; */
+} 
+
+/* 
+==========================================
+       bio data section start
+==========================================
+*/
+.bio-progress-bar {
+    width: 100%;
+    height: 0.6rem;
+    background: var(--para-tint);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+
+}
+
+.bio-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: inherit;
+    background: var(--gradientSupport);
+    border-radius: 10rem;
+}
+
+.bio-progress-2::before {
+    width: 90%;
+}
+
+.bio-progress-3::before {
+    width: 70%;
+}
+
+.bio-progress-4::before {
+    width: 85%;
+}
+
+.bio-progress-5::before {
+    width: 70%;
+}
+
+
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.7rem;
+    width: 3rem;
+    height: 2rem;
+    background: var(--helper);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-progress-bar span {
+    left: 76%;
+}
+
+.bio-progress-2 span {
+    left: 86%;
+}
+
+.bio-progress-3 span {
+    left: 66%;
+}
+
+.bio-progress-4 span {
+    left: 81%;
+}
+
+.bio-progress-5 span {
+    left: 66%;
+}
+
+/* to create a caret */
+
+
+.bio-progress-bar span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
+    top: -1.5rem;
+}
+
+.bio-stats h4{
+    line-height: 3.7rem;
+}
+
+/* 
+==========================================
+       project section start
+==========================================
+*/
+
+.btns{
+    margin: 0.8rem;
+}
+
+.section-portfolio {
+    background: var(--bg);
+    transition: all 0.7s linear;
+}
+
+.section-portfolio p {
+    max-width: 50rem;
+}
+
+
+
+.portfolio-images {
+    gap: 3rem;
+
+}
+
+.portfolio-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+.img-overlay {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.img-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradientSupport);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    border-radius: 1rem;
+    /* opacity: 0; */
+}
+
+.img-overlay:hover>.overlay {
+    transform: translateY(0);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.img-overlay .common-heading {
+    margin: 0;
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+.p-btn:hover {
+    transform: translateY(-1rem);
+}
+
+.p-btn-active {
+    transform: translateY(-1rem);
+
+}
+
+
+.p-image-not-acitve {
+    display: none;
+}
+
+
+/* 
+==========================================
+       footer section start
+==========================================
+*/
+
+
+.section-footer{
+    color: var(--white);
+}
+/* footer{
+    height: 15rem;
+} */
+
+.copyright{
+    border: 3px solid var(--helper);
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top: transparent;
+    margin-top: 1rem;
+    padding: 0 1rem .5rem 1rem;
+}
+
+
+#diagonal-bg{
+    position: absolute;
+    left: -800px;
+    width: 200%;
+    min-height: 700px;
+    background-image: -webkit-linear-gradient(118deg, #fff 35%, #8aa8ec 35%);
+  }
